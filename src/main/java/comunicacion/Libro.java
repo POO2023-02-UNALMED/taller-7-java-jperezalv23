@@ -26,7 +26,7 @@ public class Libro extends Escrito {
 	 }
 	 
 	 public int palabrasTotales(int palabrasPagina) {
-		 return palabrasPagina * 2;
+		 return palabrasPagina * 2 * super.getPaginas();
 	 }
 	 
 	 
