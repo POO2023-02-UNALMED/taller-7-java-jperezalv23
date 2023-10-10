@@ -1,5 +1,7 @@
 package comunicacion;
 
+import java.lang.reflect.Array;
+
 public class Alfabeto extends Pictograma{
     private String[] letras;
 	private String interpretacion;
@@ -17,11 +19,16 @@ public class Alfabeto extends Pictograma{
 	}
 	 
 	 public String toString() {
-		 String n = "";
-		 for (String l : letras) {
-			 n = n + l + ", ";
-		 }
-		 return n;
+		 int n = letras.length - 1;
+			String[] nuevo = new String[n];
+			System.arraycopy(letras,1,nuevo,0,n);
+			String j = (String)Array.get(letras, 0);
+			
+			for (String l : nuevo) {
+				j = j + ", " + l ;
+			}
+			
+		return j;
 		 
 	 }
 	 
